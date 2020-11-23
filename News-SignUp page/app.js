@@ -35,7 +35,7 @@ const url = "https://us7.api.mailchimp.com/3.0/lists/fb5147ed2e"
 
 const options = {
 	method: "post",
-	auth: "sathya:894939ccc7f780c48e07a7984e666ca7a-us7"
+	auth: "sathya:ac3690f00ae1cdc6d13fec8e19bb62fc-us7"
 }
 
 const request = https.request( url, options, function(response){
@@ -58,7 +58,7 @@ response.on("data", function(data){
 app.post("/failure", function(req, res){
 	res.redirect("/");
 })
- app.listen(3000, function(){
+ app.listen(process.env.PORT || 3000, function(){
  	console.log("server has started");
  })
 
