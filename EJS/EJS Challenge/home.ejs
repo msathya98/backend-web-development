@@ -5,4 +5,14 @@
 <h1>Home</h1>
 <p> <%= KindOfText %> </p> 
 
+ <% post.forEach(function(content){ %>
+ <h1> <%= content.title  %> </h1>
+<p> <%= content.info.substring(0, 100) + "...."  %>
+<a href="/details/<%=content.title%>">Readmore</a>
+</P>
+ 
+<%  }) %>
+
+
+
 <%- include('partials/footer'); -%>
